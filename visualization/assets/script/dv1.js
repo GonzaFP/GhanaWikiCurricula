@@ -176,6 +176,9 @@ function dv1(year, the_subject, sort) {
 		let y_max = d3.max(filtered_data, function (d) {
 			return +d.avg_pv;
 		});
+		let x_max = d3.max(filtered_data, function (d) {
+			return +d.first_edit;
+		});
 
 		let r_max = d3.max(filtered_data, function (d) {
 			return Math.sqrt(+d.size / 3.14);
